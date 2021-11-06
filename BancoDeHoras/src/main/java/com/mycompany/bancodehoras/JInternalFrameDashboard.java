@@ -27,67 +27,68 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        pnlPrincipal = new javax.swing.JTabbedPane();
+        panDashboard = new javax.swing.JPanel();
+        lblGrafico = new javax.swing.JLabel();
+        panColaboradores = new javax.swing.JPanel();
+        txtDigiteNomeColaborador = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
+        btnAddColaborador = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        tblColaboradores = new javax.swing.JTable();
+        panControleHoras = new javax.swing.JPanel();
+        panCabeçalho = new javax.swing.JPanel();
+        lblLogout = new javax.swing.JLabel();
+        lblPerfil = new javax.swing.JLabel();
+        lblLogoCabeçalho = new javax.swing.JLabel();
+        lblNomeAplicação = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(240, 240, 240));
         setPreferredSize(new java.awt.Dimension(767, 494));
 
-        jTabbedPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        jTabbedPane1.setToolTipText("");
-        jTabbedPane1.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
+        pnlPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pnlPrincipal.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        pnlPrincipal.setToolTipText("");
+        pnlPrincipal.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
 
-        jPanel2.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 13)); // NOI18N
+        panDashboard.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 13)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 36)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Gráfico");
+        lblGrafico.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 36)); // NOI18N
+        lblGrafico.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblGrafico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/bancodehoras/images/grafico.png"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(94, Short.MAX_VALUE))
+        javax.swing.GroupLayout panDashboardLayout = new javax.swing.GroupLayout(panDashboard);
+        panDashboard.setLayout(panDashboardLayout);
+        panDashboardLayout.setHorizontalGroup(
+            panDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panDashboardLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblGrafico, javax.swing.GroupLayout.DEFAULT_SIZE, 618, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+        panDashboardLayout.setVerticalGroup(
+            panDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panDashboardLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblGrafico, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Dashboard", jPanel2);
+        lblGrafico.getAccessibleContext().setAccessibleName("");
 
-        jTextField1.setText("Digite o nome do Colaborador");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        pnlPrincipal.addTab("Dashboard", panDashboard);
+
+        txtDigiteNomeColaborador.setText("Digite o nome do Colaborador");
+        txtDigiteNomeColaborador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtDigiteNomeColaboradorActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Buscar");
+        btnBuscar.setText("Buscar");
 
-        jButton2.setText("Adicionar Colaborador");
+        btnAddColaborador.setText("Adicionar Colaborador");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblColaboradores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Colaborador da Silva Neto", "Editar", "Deletar", "120.5"},
                 {"Colaboradora de Souza Camões", "Editar", "Deletar", "80"},
@@ -104,133 +105,143 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
                 "Nome", "Editar", "Deletar", "Saldo"
             }
         ));
-        jTable1.setShowGrid(false);
-        jTable1.setShowHorizontalLines(true);
-        jScrollPane2.setViewportView(jTable1);
+        tblColaboradores.setShowGrid(false);
+        tblColaboradores.setShowHorizontalLines(true);
+        jScrollPane2.setViewportView(tblColaboradores);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout panColaboradoresLayout = new javax.swing.GroupLayout(panColaboradores);
+        panColaboradores.setLayout(panColaboradoresLayout);
+        panColaboradoresLayout.setHorizontalGroup(
+            panColaboradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panColaboradoresLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panColaboradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panColaboradoresLayout.createSequentialGroup()
+                        .addComponent(txtDigiteNomeColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                        .addComponent(btnAddColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        panColaboradoresLayout.setVerticalGroup(
+            panColaboradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panColaboradoresLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(panColaboradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtDigiteNomeColaborador)
+                    .addComponent(btnAddColaborador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Colaboradores", jPanel3);
+        pnlPrincipal.addTab("Colaboradores", panColaboradores);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 569, Short.MAX_VALUE)
+        javax.swing.GroupLayout panControleHorasLayout = new javax.swing.GroupLayout(panControleHoras);
+        panControleHoras.setLayout(panControleHorasLayout);
+        panControleHorasLayout.setHorizontalGroup(
+            panControleHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 638, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 314, Short.MAX_VALUE)
+        panControleHorasLayout.setVerticalGroup(
+            panControleHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 334, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Controle de horas", jPanel4);
+        pnlPrincipal.addTab("Controle de horas", panControleHoras);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panCabeçalho.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panCabeçalho.setMaximumSize(new java.awt.Dimension(20, 20));
 
-        jLabel1.setText("<html><u>Logout</u>");
+        lblLogout.setText("<html><u>Logout</u>");
 
-        jLabel2.setText("Logo Perfil");
+        lblPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/bancodehoras/images/perfil.jpg"))); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 30)); // NOI18N
-        jLabel4.setText("Logo");
+        lblLogoCabeçalho.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 30)); // NOI18N
+        lblLogoCabeçalho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/bancodehoras/images/relogio.jpg"))); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 48)); // NOI18N
-        jLabel5.setText("Banco de horas");
+        lblNomeAplicação.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 48)); // NOI18N
+        lblNomeAplicação.setText("Banco de horas");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jLabel4)
-                .addGap(45, 45, 45)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout panCabeçalhoLayout = new javax.swing.GroupLayout(panCabeçalho);
+        panCabeçalho.setLayout(panCabeçalhoLayout);
+        panCabeçalhoLayout.setHorizontalGroup(
+            panCabeçalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panCabeçalhoLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(lblLogoCabeçalho)
+                .addGap(40, 40, 40)
+                .addComponent(lblNomeAplicação, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(26, 26, 26)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblPerfil)
+                .addGap(35, 35, 35)
+                .addComponent(lblLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(39, Short.MAX_VALUE))
+        panCabeçalhoLayout.setVerticalGroup(
+            panCabeçalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panCabeçalhoLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(lblNomeAplicação, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(panCabeçalhoLayout.createSequentialGroup()
+                .addGroup(panCabeçalhoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panCabeçalhoLayout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(lblLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panCabeçalhoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblLogoCabeçalho)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panCabeçalhoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblPerfil)
+                .addGap(58, 58, 58))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlPrincipal)
+            .addComponent(panCabeçalho, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panCabeçalho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane1))
+                .addComponent(pnlPrincipal))
         );
 
-        jTabbedPane1.getAccessibleContext().setAccessibleName("Dashboard");
+        pnlPrincipal.getAccessibleContext().setAccessibleName("Dashboard");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtDigiteNomeColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDigiteNomeColaboradorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtDigiteNomeColaboradorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JButton btnAddColaborador;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblGrafico;
+    private javax.swing.JLabel lblLogoCabeçalho;
+    private javax.swing.JLabel lblLogout;
+    private javax.swing.JLabel lblNomeAplicação;
+    private javax.swing.JLabel lblPerfil;
+    private javax.swing.JPanel panCabeçalho;
+    private javax.swing.JPanel panColaboradores;
+    private javax.swing.JPanel panControleHoras;
+    private javax.swing.JPanel panDashboard;
+    private javax.swing.JTabbedPane pnlPrincipal;
+    private javax.swing.JTable tblColaboradores;
+    private javax.swing.JTextField txtDigiteNomeColaborador;
     // End of variables declaration//GEN-END:variables
 }
