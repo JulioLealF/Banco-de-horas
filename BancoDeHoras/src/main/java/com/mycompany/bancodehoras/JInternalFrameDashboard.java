@@ -5,12 +5,15 @@
  */
 package com.mycompany.bancodehoras;
 
+import javax.swing.JDesktopPane;
+
 /**
  *
  * @author juliocesarlealdefaria
  */
 public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
 
+    JDesktopPane desktopPane = new JDesktopPane();
     /**
      * Creates new form JInternalFrameDashboard
      */
@@ -29,29 +32,29 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        lblGrafico = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        txtBuscarColaborador = new javax.swing.JTextField();
+        btnBuscarColaborador = new javax.swing.JButton();
+        btnAdicionarColaborador = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblListaColaboradores = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        lblColaborador = new javax.swing.JLabel();
+        CbbListaColaboradores = new javax.swing.JComboBox<>();
+        lblHorasExtras = new javax.swing.JLabel();
+        lblNumeroHorasExtras = new javax.swing.JLabel();
+        lblHorasPagas = new javax.swing.JLabel();
+        lblNumeroHorasPagas = new javax.swing.JLabel();
+        lblSaldoAtual = new javax.swing.JLabel();
+        lblNumeroSaldoAtual = new javax.swing.JLabel();
+        btnAdicionarHoras = new javax.swing.JButton();
+        btnRemoverHoras = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        lblLogout = new javax.swing.JLabel();
+        lblPerfil = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
+        lblTitulo = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(240, 240, 240));
         setPreferredSize(new java.awt.Dimension(767, 494));
@@ -63,9 +66,9 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
 
         jPanel2.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 13)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 36)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Gráfico");
+        lblGrafico.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 36)); // NOI18N
+        lblGrafico.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblGrafico.setText("Gráfico");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -73,31 +76,31 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(87, 87, 87)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addComponent(lblGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(110, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(73, 73, 73)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblGrafico, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(81, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Dashboard", jPanel2);
 
-        jTextField1.setText("Digite o nome do Colaborador");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtBuscarColaborador.setText("Digite o nome do Colaborador");
+        txtBuscarColaborador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtBuscarColaboradorActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Buscar");
+        btnBuscarColaborador.setText("Buscar");
 
-        jButton2.setText("Adicionar Colaborador");
+        btnAdicionarColaborador.setText("Adicionar Colaborador");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblListaColaboradores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Colaborador da Silva Neto", "Editar", "Deletar", "120.5"},
                 {"Colaboradora de Souza Camões", "Editar", "Deletar", "80"},
@@ -114,9 +117,9 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
                 "Nome", "Editar", "Deletar", "Saldo"
             }
         ));
-        jTable1.setShowGrid(false);
-        jTable1.setShowHorizontalLines(true);
-        jScrollPane2.setViewportView(jTable1);
+        tblListaColaboradores.setShowGrid(false);
+        tblListaColaboradores.setShowHorizontalLines(true);
+        jScrollPane2.setViewportView(tblListaColaboradores);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -127,11 +130,11 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtBuscarColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnBuscarColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                        .addComponent(btnAdicionarColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -139,9 +142,9 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtBuscarColaborador)
+                    .addComponent(btnAdicionarColaborador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuscarColaborador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -149,31 +152,36 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
 
         jTabbedPane1.addTab("Colaboradores", jPanel3);
 
-        jLabel6.setText("Colaborador:");
+        lblColaborador.setText("Colaborador:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva Gonçalves", "Maria das Dores Dias Alves", "Erllo Melancia de Colher Nowacki", "Jorge Amado dos Santos" }));
+        CbbListaColaboradores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "João da Silva Gonçalves", "Maria das Dores Dias Alves", "Erllo Melancia de Colher Nowacki", "Jorge Amado dos Santos" }));
 
-        jLabel7.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
-        jLabel7.setText("Horas extras até a data atual:");
+        lblHorasExtras.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
+        lblHorasExtras.setText("Horas extras até a data atual:");
 
-        jLabel8.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
-        jLabel8.setText("120");
+        lblNumeroHorasExtras.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
+        lblNumeroHorasExtras.setText("120");
 
-        jLabel9.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
-        jLabel9.setText("Horas pagas:");
+        lblHorasPagas.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
+        lblHorasPagas.setText("Horas pagas:");
 
-        jLabel10.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
-        jLabel10.setText("85");
+        lblNumeroHorasPagas.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
+        lblNumeroHorasPagas.setText("85");
 
-        jLabel11.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
-        jLabel11.setText("Saldo atual:");
+        lblSaldoAtual.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
+        lblSaldoAtual.setText("Saldo atual:");
 
-        jLabel12.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
-        jLabel12.setText("35");
+        lblNumeroSaldoAtual.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 18)); // NOI18N
+        lblNumeroSaldoAtual.setText("35");
 
-        jButton3.setText("Adicionar horas");
+        btnAdicionarHoras.setText("Adicionar horas");
+        btnAdicionarHoras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionarHorasActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("Remover horas");
+        btnRemoverHoras.setText("Remover horas");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -183,67 +191,72 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
                 .addGap(75, 75, 75)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(64, 64, 64)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jLabel9)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel10)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel11))
-                                .addGroup(jPanel4Layout.createSequentialGroup()
-                                    .addComponent(jLabel7)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel8)))
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel12))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                        .addComponent(CbbListaColaboradores, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(lblHorasPagas)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblNumeroHorasPagas)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblSaldoAtual))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(lblHorasExtras)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblNumeroHorasExtras)))
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNumeroSaldoAtual))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(btnAdicionarHoras, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67)
+                        .addComponent(btnRemoverHoras, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblColaborador, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CbbListaColaboradores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnAdicionarHoras, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRemoverHoras, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                    .addComponent(lblHorasExtras)
+                    .addComponent(lblNumeroHorasExtras))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12))
-                .addContainerGap(98, Short.MAX_VALUE))
+                    .addComponent(lblHorasPagas)
+                    .addComponent(lblNumeroHorasPagas)
+                    .addComponent(lblSaldoAtual)
+                    .addComponent(lblNumeroSaldoAtual))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Controle de horas", jPanel4);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setText("<html><u>Logout</u>");
+        lblLogout.setText("<html><u>Logout</u>");
+        lblLogout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblLogoutMouseClicked(evt);
+            }
+        });
 
-        jLabel2.setText("Logo Perfil");
+        lblPerfil.setText("Logo Perfil");
 
-        jLabel4.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 30)); // NOI18N
-        jLabel4.setText("Logo");
+        lblLogo.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 30)); // NOI18N
+        lblLogo.setText("Logo");
 
-        jLabel5.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 48)); // NOI18N
-        jLabel5.setText("Banco de horas");
+        lblTitulo.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 48)); // NOI18N
+        lblTitulo.setText("Banco de horas");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -251,13 +264,13 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(34, 34, 34)
-                .addComponent(jLabel4)
+                .addComponent(lblLogo)
                 .addGap(45, 45, 45)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(lblPerfil)
                 .addGap(26, 26, 26)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
         );
         jPanel1Layout.setVerticalGroup(
@@ -265,10 +278,10 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblLogout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPerfil)
+                    .addComponent(lblLogo)
+                    .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
 
@@ -292,36 +305,48 @@ public class JInternalFrameDashboard extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtBuscarColaboradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarColaboradorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtBuscarColaboradorActionPerformed
+
+    private void lblLogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoutMouseClicked
+        TelaInicial inicio = new TelaInicial();
+        inicio.setVisible(true);
+
+        desktopPane.add(inicio);
+        this.setContentPane(desktopPane);// TODO add your handling code here:
+    }//GEN-LAST:event_lblLogoutMouseClicked
+
+    private void btnAdicionarHorasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarHorasActionPerformed
+
+    }//GEN-LAST:event_btnAdicionarHorasActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JComboBox<String> CbbListaColaboradores;
+    private javax.swing.JButton btnAdicionarColaborador;
+    private javax.swing.JButton btnAdicionarHoras;
+    private javax.swing.JButton btnBuscarColaborador;
+    private javax.swing.JButton btnRemoverHoras;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblColaborador;
+    private javax.swing.JLabel lblGrafico;
+    private javax.swing.JLabel lblHorasExtras;
+    private javax.swing.JLabel lblHorasPagas;
+    private javax.swing.JLabel lblLogo;
+    private javax.swing.JLabel lblLogout;
+    private javax.swing.JLabel lblNumeroHorasExtras;
+    private javax.swing.JLabel lblNumeroHorasPagas;
+    private javax.swing.JLabel lblNumeroSaldoAtual;
+    private javax.swing.JLabel lblPerfil;
+    private javax.swing.JLabel lblSaldoAtual;
+    private javax.swing.JLabel lblTitulo;
+    private javax.swing.JTable tblListaColaboradores;
+    private javax.swing.JTextField txtBuscarColaborador;
     // End of variables declaration//GEN-END:variables
 }
