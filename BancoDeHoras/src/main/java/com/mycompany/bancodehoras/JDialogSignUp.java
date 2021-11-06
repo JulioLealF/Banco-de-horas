@@ -34,6 +34,7 @@ public class JDialogSignUp extends javax.swing.JDialog {
         txtNomeSignUp = new javax.swing.JTextField();
         txtSenhaSignUp = new javax.swing.JTextField();
         txtConfirmacaoSenhaSignUp = new javax.swing.JTextField();
+        lblVoltar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -47,6 +48,11 @@ public class JDialogSignUp extends javax.swing.JDialog {
 
         btnCadastrar.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 15)); // NOI18N
         btnCadastrar.setText("Cadastrar-se");
+        btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarActionPerformed(evt);
+            }
+        });
 
         lblTituloSignUp.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 24)); // NOI18N
         lblTituloSignUp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -76,6 +82,15 @@ public class JDialogSignUp extends javax.swing.JDialog {
             }
         });
 
+        lblVoltar.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 13)); // NOI18N
+        lblVoltar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblVoltar.setText("<html><u>Voltar</u>");
+        lblVoltar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblVoltarMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -85,14 +100,19 @@ public class JDialogSignUp extends javax.swing.JDialog {
                 .addComponent(lblTituloSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtNomeSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtEmailSignUp)
-                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(txtSenhaSignUp)
-                        .addComponent(txtConfirmacaoSenhaSignUp, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNomeSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtEmailSignUp)
+                                .addComponent(btnCadastrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtSenhaSignUp)
+                                .addComponent(txtConfirmacaoSenhaSignUp, javax.swing.GroupLayout.Alignment.TRAILING))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(lblVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(76, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -102,15 +122,17 @@ public class JDialogSignUp extends javax.swing.JDialog {
                 .addComponent(lblTituloSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(txtNomeSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtEmailSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSenhaSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtConfirmacaoSenhaSignUp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(lblVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
@@ -131,6 +153,14 @@ public class JDialogSignUp extends javax.swing.JDialog {
     private void txtSenhaSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaSignUpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSenhaSignUpActionPerformed
+
+    private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCadastrarActionPerformed
+
+    private void lblVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblVoltarMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_lblVoltarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -177,6 +207,7 @@ public class JDialogSignUp extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JLabel lblTituloSignUp;
+    private javax.swing.JLabel lblVoltar;
     private javax.swing.JTextField txtConfirmacaoSenhaSignUp;
     private javax.swing.JTextField txtEmailSignUp;
     private javax.swing.JTextField txtNomeSignUp;

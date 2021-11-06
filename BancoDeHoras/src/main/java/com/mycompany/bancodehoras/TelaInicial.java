@@ -70,6 +70,11 @@ public class TelaInicial extends javax.swing.JFrame {
         lblRecuperarSenha.setFont(new java.awt.Font("Fira Sans Semi-Light", 0, 13)); // NOI18N
         lblRecuperarSenha.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRecuperarSenha.setText("<html><u>Esqueci minha senha</u>");
+        lblRecuperarSenha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRecuperarSenhaMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -118,25 +123,25 @@ public class TelaInicial extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogInActionPerformed
-        
-        boolean login = true;
-        
         JDialogLogIn modalLogin = new JDialogLogIn(this, true);
         modalLogin.setVisible(true);
         
-        if(login){
-            JInternalFrameDashboard dashboard = new JInternalFrameDashboard();
-            dashboard.setVisible(true);
+        JInternalFrameDashboard dashboard = new JInternalFrameDashboard();
+        dashboard.setVisible(true);
 
-            desktopPane.add(dashboard);
-            this.setContentPane(desktopPane);
-        }
+        desktopPane.add(dashboard);
+        this.setContentPane(desktopPane);
     }//GEN-LAST:event_btnLogInActionPerformed
 
     private void btnSignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignUpActionPerformed
         JDialogSignUp modalSignup = new JDialogSignUp(this, true);
         modalSignup.setVisible(true);
     }//GEN-LAST:event_btnSignUpActionPerformed
+
+    private void lblRecuperarSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRecuperarSenhaMouseClicked
+        JDialogRecoverPassword modalRecoverPassword = new JDialogRecoverPassword(this, true);
+        modalRecoverPassword.setVisible(true);
+    }//GEN-LAST:event_lblRecuperarSenhaMouseClicked
 
     /**
      * @param args the command line arguments
